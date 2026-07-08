@@ -1,1 +1,8 @@
+Bug 1: calculate_total() accepted negative price/quantity and 
+returned an invalid (negative) total instead of rejecting it.
 
+Bug 2: main.py crashed with an unhandled ValueError when the 
+user typed non-numeric text for price or quantity.
+
+Fix: Added validation inside calculate_total() to raise ValueError 
+when price or quantity is negative.
